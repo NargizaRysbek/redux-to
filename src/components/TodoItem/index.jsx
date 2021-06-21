@@ -1,7 +1,7 @@
 import React from 'react'
 // import { useState } from 'react'
 import { connect } from 'react-redux'
-import { toggle_todo } from '../../store/actions/todoList'
+import { toggle_todo, delete_todo} from '../../store/actions/todoList'
 
 
 const TodoItem = ({ todo, toggle_todo, id,  delete_todo}) => {
@@ -30,7 +30,8 @@ const styles = {
 //     toggle_todo:  dispatch(toggle_todo())
 // })
 const MapDispatchToProps = dispatch => ({
-    toggle_todo: (id) =>   dispatch(toggle_todo(id))
+    toggle_todo: (id) =>   dispatch(toggle_todo(id)),
+    delete_todo: (id) => dispatch(delete_todo(id))
 })
 
 
